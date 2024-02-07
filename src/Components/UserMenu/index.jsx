@@ -1,6 +1,6 @@
-function UserMenu() {
+function UserMenu({user}) {
     return (
-        <p>Logged in as Ash</p>
+        <p>Logged in as {user}</p>
     )
 }
 
