@@ -1,0 +1,5 @@
+.side-menu {
+    height: calc(100vh - 48.2px);
+    background-color: aliceblue;
+    padding: 10px;
+}
