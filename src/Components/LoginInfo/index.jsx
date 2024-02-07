@@ -1,6 +1,9 @@
-function LoginInfo({user}) {
+function LoginInfo({user, logout}) {
     return (
-        <p>Logged in as {user}</p>
+        <div>
+            <p>Logged in as {user}</p>
+            <button onClick={logout}>Logout</button>
+        </div>
     )
 }
 
