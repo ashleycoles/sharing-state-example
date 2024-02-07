@@ -1,12 +1,12 @@
 import LoginInfo from "../LoginInfo"
 import './Navbar.css'
 
-function Navbar() {
+function Navbar({user}) {
     return (
         <nav>
             <span>Not Facebook</span>
 
-            <LoginInfo />
+            <LoginInfo user={user} />
         </nav>
     )
 }

@@ -6,10 +6,10 @@ import SideMenu from './Components/SideMenu'
 
 function App() {
   const [username, setUsername] = useState('')
-  
+
   return (
     <>
-      <Navbar />
+      <Navbar user={username} />
       <div className='content'>
         <SideMenu />
         <NewsFeed />
