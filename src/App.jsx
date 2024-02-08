@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import NewsFeed from './Components/NewsFeed'
 import SideMenu from './Components/SideMenu'
+import UserContext from './UserContext'
 
 function App() {
   const [username, setUsername] = useState('Herbert')
@@ -13,11 +14,18 @@ function App() {
 
   return (
     <>
-      <Navbar user={username} logout={logout} />
-      <div className='content'>
-        <SideMenu user={username} />
-        <NewsFeed />
-      </div>
+      {/* Any component contained within the Provider can now access the data */}
+      <UserContext.Provider value={ {user: username, logout: logout} }>
+
+
+        <Navbar />
+        <div className='content'>
+          <SideMenu />
+          <NewsFeed />
+        </div>
+
+      </UserContext.Provider>
+
     </>
   )
 }

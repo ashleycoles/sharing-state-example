@@ -1,10 +1,10 @@
 import UserMenu from "../UserMenu"
 import './SideMenu.css'
 
-function SideMenu({user}) {
+function SideMenu() {
     return (
         <section className="side-menu">
-            <UserMenu user={user} />
+            <UserMenu />
         </section>
     )
 }
